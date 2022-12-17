@@ -10,12 +10,14 @@ a = 1000
 while a > 0:
     print(f"{a} - 7 = {a - 7}")
     a -= 7
-    time.sleep(0.1)
+    time.sleep(0.01)
 
     if a < 0:
         img = cv2.imread(
             '/Users/gvozdevalexey/Downloads/shounen-red-eyes-human-monster-tokyo-ghoul-ken-kaneki-ghoul.jpg', 0)
         cv2.imshow('', img)
         cv2.waitKey(1)
+        cv2.destroyAllWindows()
+        print("Я ГУЛЬ")
         time.sleep(5)
 
