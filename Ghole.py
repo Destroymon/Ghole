@@ -7,14 +7,15 @@ playsound(
     False)
 
 a = 1000
-while a >= 0:
-    a = a - 7
+while a > 0:
+    print(f"{a} - 7 = {a - 7}")
+    a -= 7
     time.sleep(0.1)
-    print(a)
+
     if a < 0:
         img = cv2.imread(
             '/Users/gvozdevalexey/Downloads/shounen-red-eyes-human-monster-tokyo-ghoul-ken-kaneki-ghoul.jpg', 0)
         cv2.imshow('', img)
         cv2.waitKey(1)
         time.sleep(5)
-quit()
+
