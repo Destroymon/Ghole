@@ -1,23 +1,23 @@
 import time
 import cv2
-from playsound import playsound
 
-playsound(
-    '/Users/gvozdevalexey/Downloads/TK_from_Ling_Tosite_Sigure_-_UNRAVEL_ost_Tokyo_Ghoul_Tokijjskijj_gul_OP_64191680.mp3',
-    False)
+from pygame import mixer
+
+mixer.init()
+mixer.music.load('D:/Alexey/Desktop/Проекты/Ghole/TK_from_Ling.mp3')
+mixer.music.play()
 
 a = 1000
 while a > 0:
     print(f"{a} - 7 = {a - 7}")
     a -= 7
-    time.sleep(0.01)
+    time.sleep(0.1)
 
     if a < 0:
-        img = cv2.imread(
-            '/Users/gvozdevalexey/Downloads/shounen-red-eyes-human-monster-tokyo-ghoul-ken-kaneki-ghoul.jpg', 0)
+        mypath = 'shounen.jpg'
+        img = cv2.imread(mypath, 1)
         cv2.imshow('', img)
-        cv2.waitKey(1)
+        cv2.waitKey(10000)
         cv2.destroyAllWindows()
         print("Я ГУЛЬ")
-        time.sleep(5)
 
